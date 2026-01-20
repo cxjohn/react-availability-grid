@@ -1,0 +1,41 @@
+# Source files (we ship dist/ only)
+src/
+public/
+build/
+
+# Development files
+.git/
+.github/
+node_modules/
+.vscode/
+.idea/
+
+# Config files
+tsconfig.json
+tsup.config.ts
+.eslintrc
+.prettierrc
+.editorconfig
+
+# Test files
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+__tests__/
+coverage/
+
+# CI/CD
+.travis.yml
+.circleci/
+.gitlab-ci.yml
+
+# Misc
+*.log
+*.lock
+yarn.lock
+package-lock.json
+.DS_Store
+.env
+.env.local
+.env.*.local

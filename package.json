@@ -1,0 +1,103 @@
+{
+  "name": "react-availability-grid",
+  "version": "0.1.0",
+  "description": "React scheduling components: TimeGrid (drag-select availability) and AggregatedTimeGrid (group overlap heatmap). TypeScript, accessible, customizable.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "availability",
+    "time-grid",
+    "timeslot",
+    "picker",
+    "scheduler",
+    "calendar",
+    "scheduling",
+    "time-selection",
+    "drag-and-drop",
+    "meeting",
+    "appointment",
+    "booking",
+    "timepicker",
+    "react-component",
+    "dayjs",
+    "typescript",
+    "hooks",
+    "accessible",
+    "aria",
+    "keyboard-navigation",
+    "whenisgood",
+    "calendly",
+    "doodle",
+    "poll",
+    "availability-picker",
+    "time-slots",
+    "event-scheduling"
+  ],
+  "author": "Jason Moggridge, Chris John",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cxjohn/react-availability-grid.git"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "dayjs": "^1.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.1",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "dayjs": "^1.11.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:lib": "tsup",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepublishOnly": "npm run build:lib",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

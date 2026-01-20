@@ -1,0 +1,150 @@
+/* TimeGrid Styles */
+
+:root {
+  /* Cell colors */
+  --timegrid-cell-bg: #ffffff;
+  --timegrid-cell-selected-bg: #212529;
+  --timegrid-cell-disabled-color: #adb5bd;
+  --timegrid-cell-border-color: transparent;
+  --timegrid-cell-text-color: #495057;
+  --timegrid-cell-selected-text-color: #ffffff;
+
+  /* Day header colors */
+  --timegrid-day-bg: transparent;
+  --timegrid-day-label-color: #6c757d;
+  --timegrid-day-number-color: #212529;
+  --timegrid-day-month-color: #adb5bd;
+
+  /* Weekend colors */
+  --timegrid-weekend-bg: #ffffff;
+
+  /* Hover colors */
+  --timegrid-cell-hover-bg: #e9ecef;
+
+  /* Borders and sizing */
+  --timegrid-border-radius: 4px;
+  --timegrid-cell-width: 50px;
+  --timegrid-cell-height: 32px;
+  --timegrid-day-height: 50px;
+  --timegrid-gap: 3px;
+
+  /* Heatmap gradient for AggregatedTimeGrid */
+  --timegrid-heatmap-empty: #f5f5f5;
+  --timegrid-heatmap-start: #f5f5f5;
+  --timegrid-heatmap-end: #2c2c2c;
+}
+
+/* Container */
+.timegrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 18px;
+  background-color: #f8f9fa;
+}
+
+/* Header row with day labels */
+.timegrid-header {
+  display: flex;
+  gap: var(--timegrid-gap);
+  margin-bottom: var(--timegrid-gap);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Time slot row */
+.timegrid-row {
+  display: flex;
+  gap: var(--timegrid-gap);
+  margin-bottom: var(--timegrid-gap);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Day header cell */
+.timegrid-day {
+  width: var(--timegrid-cell-width);
+  height: var(--timegrid-day-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 500;
+  text-align: center;
+  padding: 8px 4px;
+  background-color: var(--timegrid-day-bg);
+  color: var(--timegrid-day-label-color);
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+.timegrid-day-number {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--timegrid-day-number-color);
+  margin: 2px 0;
+  text-transform: none;
+  pointer-events: none;
+}
+
+/* Time slot cell */
+.timegrid-cell {
+  width: var(--timegrid-cell-width);
+  height: var(--timegrid-cell-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--timegrid-cell-text-color);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  border: none;
+  border-radius: var(--timegrid-border-radius);
+  background-color: var(--timegrid-cell-bg);
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.timegrid-cell:hover:not(.disabled):not(.selected) {
+  background-color: var(--timegrid-cell-hover-bg);
+  transition: background-color 0.2s ease;
+}
+
+.timegrid-cell.weekend {
+  background-color: var(--timegrid-weekend-bg);
+}
+
+.timegrid-cell.selected {
+  color: var(--timegrid-cell-selected-text-color);
+  background-color: var(--timegrid-cell-selected-bg);
+  font-weight: 500;
+}
+
+.timegrid-cell.disabled {
+  color: var(--timegrid-cell-disabled-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* AggregatedTimeGrid uses dynamic gradient colors via inline styles */
+.timegrid-cell.aggregated.weekend {
+  opacity: 0.7;
+}
+
+.timegrid-cell.aggregated:hover {
+  opacity: 0.85;
+}
