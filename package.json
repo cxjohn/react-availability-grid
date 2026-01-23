@@ -1,6 +1,6 @@
 {
   "name": "react-availability-grid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React scheduling components: TimeGrid (drag-select availability) and AggregatedTimeGrid (group overlap heatmap). TypeScript, accessible, customizable.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
